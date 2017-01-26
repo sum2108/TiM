@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class Service
+    public class Service
     {
         public List<Adapter> Where(List<Adapter> adapters, Packet packet)
         {

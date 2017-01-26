@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    interface IWatcher
+    public interface IWatcher
     {
         void Notify(Observable observable, object data);
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    abstract class Observable
+    public abstract class Observable
     {
         List<IWatcher> watchers;
         public void AddWatcher(IWatcher watcher)

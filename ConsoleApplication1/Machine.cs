@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class Machine : IWatcher
+    public class Machine : IWatcher
     {
         Service service;
         List<Adapter> adapters;
+        public bool ThrowByPacketReceive{ get; set; }
 
         public List<Adapter> Adapters
         {
@@ -23,11 +24,14 @@ namespace ConsoleApplication1
             this.service = service;
             this.adapters = adapters;
             this.adapters.ForEach((adapter) => { adapter.AddWatcher(this); });
+            this.ThrowByPacketReceive = false;
         }
 
         public void HandlePacket(Adapter adapter, Packet packet)
         {
             Console.WriteLine(this + " handle Packet" + packet);
+            if (this.ThrowByPacketReceive && packet.Type != PacketType.ICMP_ECHO_REQUEST)
+                throw new Exception("Packet was received");
             switch (packet.Type)
             {
                 case PacketType.ICMP_ECHO_REQUEST:

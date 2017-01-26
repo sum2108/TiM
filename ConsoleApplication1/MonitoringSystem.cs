@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class MonitoringSystem : IWatcher
+    public class MonitoringSystem : IWatcher
     {
         Network currentNetwork;
         Dictionary<Network, Adapter> networks;

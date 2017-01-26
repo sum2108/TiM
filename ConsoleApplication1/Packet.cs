@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    struct Header
+    public struct Header
     {
         public int src;
         public int dst;
@@ -16,8 +16,8 @@ namespace ConsoleApplication1
             this.dst = dst;
         }
     }
-    enum PacketType { ICMP_ECHO_REQUEST, ICMP_ECHO_REPLY, TCP, UDP }
-    class Packet
+    public enum PacketType { ICMP_ECHO_REQUEST, ICMP_ECHO_REPLY, TCP, UDP }
+    public class Packet
     {
         PacketType packetType;
         Object data;
@@ -42,6 +42,10 @@ namespace ConsoleApplication1
             get
             {
                 return this.header;
+            }
+            set
+            {
+                this.header = value;
             }
         }
 

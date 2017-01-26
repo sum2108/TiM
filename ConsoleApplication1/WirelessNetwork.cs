@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class WirelessNetwork : Network
+    public class WirelessNetwork : Network
     {
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    abstract class Network : Observable
+    public abstract class Network : Observable
     {
         public void GetPacket(Packet packet)
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    abstract class Adapter : Observable, IWatcher
+    public abstract class Adapter : Observable, IWatcher
     {
         private Network network;
         private int mask;
